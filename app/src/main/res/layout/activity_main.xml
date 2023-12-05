@@ -4,12 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/primary"
     tools:context=".ui.views.MainActivity">
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/black"
         android:minHeight="?attr/actionBarSize"
         android:theme="?attr/actionBarTheme"
         app:layout_constraintEnd_toEndOf="parent"
@@ -20,7 +20,8 @@
             android:layout_gravity="center"
             android:textStyle="bold"
             android:textSize="24sp"
-            android:text="Todo List"
+            android:text="todo list"
+            android:fontFamily="sans-serif-smallcaps"
             android:gravity="center"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
