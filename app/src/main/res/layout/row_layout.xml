@@ -7,6 +7,10 @@
         <variable
             name="taskEntry"
             type="com.mad.assignment.database.TaskEntry" />
+
+        <variable
+            name="clickListener"
+            type="com.mad.assignment.ui.task.TaskClickListener" />
     </data>
 <androidx.cardview.widget.CardView
     android:layout_width="match_parent"
@@ -14,6 +18,8 @@
     android:layout_margin="4dp"
     app:cardCornerRadius="8dp"
     app:cardElevation="4dp"
+    app:cardBackgroundColor="@color/primary"
+    android:onClick="@{() -> clickListener.onClick(taskEntry)}"
     >
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -28,6 +34,8 @@
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
+            android:textColor="@color/white"
+            android:fontFamily="sans-serif-condensed-medium"
             tools:text="Title"
             android:text="@{taskEntry.title}"
             android:textAppearance="@style/TextAppearance.AppCompat.Large"
@@ -42,6 +50,8 @@
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
+            android:textColor="@color/white"
+            android:fontFamily="monospace"
             tools:text="High"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -56,6 +66,8 @@
             android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
             android:layout_marginBottom="8dp"
+            android:textColor="@color/white"
+            android:fontFamily="monospace"
             tools:text="timestamp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
